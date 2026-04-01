@@ -1,9 +1,11 @@
 import puppeteer from "puppeteer";
 import type { Job } from "../types/jobsType.js"
 
-const linkFilter = "https://www.getonbrd.com/empleos-desarrollador"
+const linkBase = "https://www.getonbrd.com/empleos-"
 
-const getOnBoardJobs = async (): Promise<Job[]> => {
+const getOnBoardJobs = async (keyword: string | undefined): Promise<Job[]> => {
+
+  const linkFilter = `${linkBase}${keyword}`
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 

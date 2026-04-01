@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#search {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 300px;
+}
+
+#searchButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #005bb5;
+}
+
+#jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.jobCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.jobCard .title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.jobCard .location {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.jobCard .source {
+    font-size: 0.75rem;
+    background-color: #e8f0fe;
+    color: #0070f3;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.jobCard a {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.jobCard a:hover {
+    text-decoration: underline;
+}
